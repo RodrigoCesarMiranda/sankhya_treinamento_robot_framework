@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220806 13:27:25.884" rpa="false" schemaversion="3">
+<suite id="s1" name="Exemplo" source="C:\Users\rodrigo.miranda\Desktop\Cursos - Material de Apoio\ROBOT\sankhya_treinamento_robot_framework\Exemplo.robot">
+<test id="s1-t1" name="Zero teste" line="14">
+<kw name="Catenate" library="BuiltIn">
+<var>${Log}</var>
+<arg>\n Hello</arg>
+<arg>Word</arg>
+<arg>i'm HAPPY \n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220806 13:27:25.911" level="INFO">${Log} = 
+ Hello Word i'm HAPPY 
+</msg>
+<status status="PASS" starttime="20220806 13:27:25.911" endtime="20220806 13:27:25.911"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.912" endtime="20220806 13:27:25.913"/>
+</kw>
+<status status="PASS" starttime="20220806 13:27:25.911" endtime="20220806 13:27:25.913"/>
+</test>
+<test id="s1-t2" name="Primeiro teste" line="18">
+<kw name="Catenate" library="BuiltIn">
+<var>${Log}</var>
+<arg>\n${a}</arg>
+<arg>${b}</arg>
+<arg>${c}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220806 13:27:25.915" level="INFO">${Log} = 
+Hello Word Happy
+</msg>
+<status status="PASS" starttime="20220806 13:27:25.915" endtime="20220806 13:27:25.915"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.915" endtime="20220806 13:27:25.916"/>
+</kw>
+<tag>Catenate</tag>
+<status status="PASS" starttime="20220806 13:27:25.914" endtime="20220806 13:27:25.916"/>
+</test>
+<test id="s1-t3" name="Segundo teste" line="23">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Meu_Segundo_Teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.916" endtime="20220806 13:27:25.917"/>
+</kw>
+<status status="PASS" starttime="20220806 13:27:25.916" endtime="20220806 13:27:25.917"/>
+</test>
+<test id="s1-t4" name="Terceiro teste" line="26">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola ${Pessoa.nome} ${Pessoa.sobrenome} voce ja esta velho ${Pessoa.idade}!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.919" endtime="20220806 13:27:25.921"/>
+</kw>
+<tag>imprimir</tag>
+<status status="PASS" starttime="20220806 13:27:25.919" endtime="20220806 13:27:25.922"/>
+</test>
+<test id="s1-t5" name="Quarto teste" line="30">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola meu amor ${Lista_Frutas}[1]!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.923" endtime="20220806 13:27:25.924"/>
+</kw>
+<tag>lista</tag>
+<status status="PASS" starttime="20220806 13:27:25.923" endtime="20220806 13:27:25.925"/>
+</test>
+<test id="s1-t6" name="Quinto teste" line="34">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola, segue meus dados: \n ${Pessoa.nome} ${Pessoa.sobrenome}, em 2022 estou com ${Pessoa.idade} anos, sou ${Pessoa.EstadoCivil}, estou ${Pessoa.Emocional}!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.927" endtime="20220806 13:27:25.930"/>
+</kw>
+<tag>imprimir_2</tag>
+<status status="PASS" starttime="20220806 13:27:25.927" endtime="20220806 13:27:25.930"/>
+</test>
+<test id="s1-t7" name="Sexto teste" line="38">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola, meu nome é ${Pessoa.nome} ${Pessoa.sobrenome}, tenho ${Pessoa.idade} anos, sou ${Pessoa.EstadoCivil}, sou ${Pessoa.Emocional}!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220806 13:27:25.931" endtime="20220806 13:27:25.933"/>
+</kw>
+<status status="PASS" starttime="20220806 13:27:25.930" endtime="20220806 13:27:25.933"/>
+</test>
+<status status="PASS" starttime="20220806 13:27:25.886" endtime="20220806 13:27:25.934"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Catenate</stat>
+<stat pass="1" fail="0" skip="0">imprimir</stat>
+<stat pass="1" fail="0" skip="0">imprimir_2</stat>
+<stat pass="1" fail="0" skip="0">lista</stat>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Exemplo">Exemplo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

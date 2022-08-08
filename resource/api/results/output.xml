@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220731 09:50:55.079" rpa="false" schemaversion="3">
+<suite id="s1" name="Exemplo" source="C:\Users\rodrigo.miranda\Desktop\Cursos - Material de Apoio\ROBOT\sankhya_treinamento_robot_framework\Exemplo.robot">
+<test id="s1-t1" name="Zero teste" line="14">
+<kw name="Catenate" library="BuiltIn">
+<var>${Log}</var>
+<arg>\n Hello</arg>
+<arg>Word</arg>
+<arg>i'm happy \n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220731 09:50:55.105" level="INFO">${Log} = 
+ Hello Word i'm happy 
+</msg>
+<status status="PASS" starttime="20220731 09:50:55.105" endtime="20220731 09:50:55.105"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220731 09:50:55.106" endtime="20220731 09:50:55.106"/>
+</kw>
+<status status="PASS" starttime="20220731 09:50:55.104" endtime="20220731 09:50:55.106"/>
+</test>
+<test id="s1-t2" name="Primeiro teste" line="19">
+<kw name="Catenate" library="BuiltIn">
+<var>${Log}</var>
+<arg>\n${a}</arg>
+<arg>${b}</arg>
+<arg>${c}\n</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220731 09:50:55.109" level="INFO">${Log} = 
+Hello Word Happy
+</msg>
+<status status="PASS" starttime="20220731 09:50:55.109" endtime="20220731 09:50:55.109"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Log}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220731 09:50:55.109" endtime="20220731 09:50:55.110"/>
+</kw>
+<tag>Catenate</tag>
+<status status="PASS" starttime="20220731 09:50:55.109" endtime="20220731 09:50:55.110"/>
+</test>
+<test id="s1-t3" name="Segundo teste" line="24">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n meu segundo teste \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220731 09:50:55.111" endtime="20220731 09:50:55.112"/>
+</kw>
+<status status="PASS" starttime="20220731 09:50:55.111" endtime="20220731 09:50:55.112"/>
+</test>
+<test id="s1-t4" name="Terceiro teste" line="27">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola ${Pessoa.nome} ${Pessoa.sobrenome} voce ja esta velho ${Pessoa.idade}!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220731 09:50:55.114" endtime="20220731 09:50:55.117"/>
+</kw>
+<tag>imprimir</tag>
+<status status="PASS" starttime="20220731 09:50:55.114" endtime="20220731 09:50:55.117"/>
+</test>
+<test id="s1-t5" name="Quarto teste" line="31">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola meu amor ${Lista_Frutas}[1]!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220731 09:50:55.118" endtime="20220731 09:50:55.119"/>
+</kw>
+<tag>lista</tag>
+<status status="PASS" starttime="20220731 09:50:55.117" endtime="20220731 09:50:55.119"/>
+</test>
+<test id="s1-t6" name="Quinto teste" line="35">
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n\n Ola, segue meus dados ${Pessoa.nome}</arg>
+<arg>${Pessoa.sobrenome}</arg>
+<arg>${Pessoa.idade} ${Pessoa.EstadoCivil}</arg>
+<arg>${Pessoa.Emocional}!!! \n\n</arg>
+<doc>Logs the given message to the console.</doc>
+<msg timestamp="20220731 09:50:55.125" level="FAIL">ValueError: Invalid format specifier</msg>
+<status status="FAIL" starttime="20220731 09:50:55.121" endtime="20220731 09:50:55.126"/>
+</kw>
+<tag>imprimir</tag>
+<status status="FAIL" starttime="20220731 09:50:55.120" endtime="20220731 09:50:55.127">ValueError: Invalid format specifier</status>
+</test>
+<test id="s1-t7" name="Sexto teste" line="39">
+<status status="FAIL" starttime="20220731 09:50:55.128" endtime="20220731 09:50:55.129">Test contains no keywords.</status>
+</test>
+<status status="FAIL" starttime="20220731 09:50:55.081" endtime="20220731 09:50:55.130"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Catenate</stat>
+<stat pass="1" fail="1" skip="0">imprimir</stat>
+<stat pass="1" fail="0" skip="0">lista</stat>
+</tag>
+<suite>
+<stat pass="5" fail="2" skip="0" id="s1" name="Exemplo">Exemplo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

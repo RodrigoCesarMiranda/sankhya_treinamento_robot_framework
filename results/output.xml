@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220808 20:37:20.662" rpa="false" schemaversion="3">
+<suite id="s1" name="Sankhya Treinamento Robot Framework" source="C:\Users\rodrigo.miranda\Desktop\Cursos - Material de Apoio\ROBOT\sankhya_treinamento_robot_framework">
+<suite id="s1-s1" name="Test" source="C:\Users\rodrigo.miranda\Desktop\Cursos - Material de Apoio\ROBOT\sankhya_treinamento_robot_framework\test">
+<suite id="s1-s1-s1" name="api Desafio" source="C:\Users\rodrigo.miranda\Desktop\Cursos - Material de Apoio\ROBOT\sankhya_treinamento_robot_framework\test\api_Desafio.robot">
+<test id="s1-s1-s1-t1" name="Pegar todos os usuarios ja cadastrados e printar a qtd dos usuarios ja cadastrados" line="6">
+<kw name="Dado que tenho os dados para efetuar o servico list_all_users" library="api_Desafio">
+<kw name="Catenate" library="BuiltIn">
+<var>${end_point}</var>
+<arg>${url_base}${path_params}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220808 20:37:20.910" level="INFO">${end_point} = https://gorest.co.in/public/v2/users/</msg>
+<status status="PASS" starttime="20220808 20:37:20.909" endtime="20220808 20:37:20.912"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${response}</var>
+<arg>${end_point}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20220808 20:37:22.190" level="INFO">GET Request : url=https://gorest.co.in/public/v2/users/ 
+ path_url=/public/v2/users/ 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220808 20:37:22.192" level="INFO">GET Response : url=https://gorest.co.in/public/v2/users/ 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 08 Aug 2022 23:37:23 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding, Origin', 'X-Frame-Options': 'SAMEORIGIN', 'X-XSS-Protection': '0', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Permitted-Cross-Domain-Policies': 'none', 'Referrer-Policy': 'strict-origin-when-cross-origin', 'X-Pagination-Total': '3996', 'X-Pagination-Pages': '400', 'X-Pagination-Page': '1', 'X-Pagination-Limit': '10', 'X-Links-Previous': '', 'X-Links-Current': 'https://gorest.co.in/public/v2/users?page=1', 'X-Links-Next': 'https://gorest.co.in/public/v2/users?page=2', 'ETag': 'W/"4af02e8ce3732b9ab17ad7619fe8316a"', 'Cache-Control': 'max-age=0, private, must-revalidate', 'X-Request-Id': '796bc689-ebb8-4b42-b331-4e79ec6455b1', 'X-Runtime': '0.006596', 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains', 'Content-Encoding': 'gzip', 'CF-Cache-Status': 'DYNAMIC', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=MwRWWKJ4Jl%2B4Ab9%2Fxhn2wLdHM0TfthJQ4uFAkkLKheRWEHnDhUj%2FNmylcblvNkln1RV2KyDIAJLNw3QjKtADTsYg%2ByCVfL8k5H49h5dcEcDDjWQWnOIPMWCu7ZEAtd0%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '737c145aace4e6b8-EWR', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body=[{"id":4006,"name":"Dulari Sinha JD","email":"jd_sinha_dulari@windler.name","gender":"male","status":"inactive"},{"id":4005,"name":"Lal Marar","email":"marar_lal@thompson.co","gender":"female","status":"inactive"},{"id":4003,"name":"Akshainie Trivedi","email":"trivedi_akshainie@quitzon.info","gender":"female","status":"inactive"},{"id":4001,"name":"Rajinder Talwar","email":"rajinder_talwar@kuhlman.co","gender":"male","status":"inactive"},{"id":4000,"name":"Sen. Hiranya Embranthiri","email":"embranthiri_sen_hiranya@murazik.info","gender":"female","status":"inactive"},{"id":3999,"name":"Chakravartee Dwivedi","email":"chakravartee_dwivedi@gottlieb.name","gender":"male","status":"inactive"},{"id":3998,"name":"Purnima Panicker LLD","email":"lld_purnima_panicker@mosciski-labadie.biz","gender":"female","status":"inactive"},{"id":3997,"name":"Ajeet Mehra","email":"ajeet_mehra@gutmann-thiel.com","gender":"female","status":"active"},{"id":3996,"name":"Shivakari Guneta","email":"shivakari_guneta@cummerata.biz","gender":"female","status":"inactive"},{"id":3995,"name":"Bhadra Gupta V","email":"gupta_v_bhadra@dach.co","gender":"female","status":"active"}] 
+ </msg>
+<msg timestamp="20220808 20:37:22.193" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220808 20:37:20.912" endtime="20220808 20:37:22.195"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220808 20:37:22.196" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220808 20:37:22.195" endtime="20220808 20:37:22.198"/>
+</kw>
+<status status="PASS" starttime="20220808 20:37:20.907" endtime="20220808 20:37:22.198"/>
+</kw>
+<kw name="Quando executo servico list_all_users" library="api_Desafio">
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>url=${end_point}</arg>
+<arg>params=&amp;{params}</arg>
+<arg>data=${payload}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220808 20:37:22.204" level="FAIL">MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant http://?</msg>
+<status status="FAIL" starttime="20220808 20:37:22.201" endtime="20220808 20:37:22.208"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20220808 20:37:22.209" endtime="20220808 20:37:22.209"/>
+</kw>
+<status status="FAIL" starttime="20220808 20:37:22.200" endtime="20220808 20:37:22.210"/>
+</kw>
+<status status="FAIL" starttime="20220808 20:37:20.902" endtime="20220808 20:37:22.212">MissingSchema: Invalid URL '': No scheme supplied. Perhaps you meant http://?</status>
+</test>
+<status status="FAIL" starttime="20220808 20:37:20.715" endtime="20220808 20:37:22.215"/>
+</suite>
+<status status="FAIL" starttime="20220808 20:37:20.710" endtime="20220808 20:37:22.220"/>
+</suite>
+<status status="FAIL" starttime="20220808 20:37:20.668" endtime="20220808 20:37:22.224"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Sankhya Treinamento Robot Framework">Sankhya Treinamento Robot Framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Sankhya Treinamento Robot Framework.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="api Desafio">Sankhya Treinamento Robot Framework.Test.api Desafio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
